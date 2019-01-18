@@ -12,7 +12,7 @@ Quotes.prototype.getData = function () {
   const myPromise = request.get();
 
     myPromise.then((data) => {
-      this.data = data.quotes[];
+      this.data = data.quotes;
       console.log(this.data);
       PubSub.publish('Quotes:data-ready', this.data);
     })
