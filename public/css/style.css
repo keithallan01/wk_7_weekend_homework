@@ -1,0 +1,16 @@
+
+body {
+  font-family: arial;
+  /* background-image: url('https://images.tbs.com/tbs/$dyna_params/https%3A%2F%2Fi.cdn.tbs.com%2Fassets%2Fimages%2F2017%2F03%2FSeinfeld-1920x1080.jpg'); */
+  background-size: 100%;
+}
+
+div {
+  border: 1px solid black;
+  padding: 10px;
+  background:
+}
+
+h1  {
+  font-size: 80px;
+}
