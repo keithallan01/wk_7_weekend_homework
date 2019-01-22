@@ -7,8 +7,9 @@ const QuotesListView = function(container) {
 
 QuotesListView.prototype.bindEvents = function() {
   PubSub.subscribe('Quotes:data-ready', (event) => {
-    console.log(event);
+    this.container.textContent = ''
     this.quotes = event.detail;
+    debugger
     this.render();
   });
 };

@@ -1,6 +1,7 @@
 const QuotesListView = require('./views/quotes_list_view.js')
 const Quotes = require('./models/quotes.js');
 const SelectView = require('./views/select_view.js');
+const PubSub = require('./helpers/pub_sub.js')
 
 
 
@@ -18,5 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const quotes = new Quotes();
   quotes.getData();
+  // debugger
+  quotes.bindEvents();
 
 });

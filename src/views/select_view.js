@@ -6,7 +6,9 @@ const SelectView = function (selectElement) {
 
 SelectView.prototype.bindEvents = function () {
   PubSub.subscribe('Quotes:authors-ready', (evt) => {
+    console.log(evt.detail);
     this.populateSelect(evt.detail);
+
   });
 
   this.selectElement.addEventListener('change', (evt) => {
@@ -17,7 +19,7 @@ SelectView.prototype.bindEvents = function () {
 
 SelectView.prototype.populateSelect = function (authors) {
   authors.forEach((author, index) => {
-    const option = this.createAuthorOption(this.quotes.author, index);
+    const option = this.createAuthorOption(author, index);
     this.selectElement.appendChild(option);
   })
 };

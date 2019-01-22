@@ -8,9 +8,9 @@ QuoteView.prototype.render = function () {
   quoteName.textContent = this.quotes.quote;
   this.container.appendChild(quoteName)
 
-  // const quoteAuthor = document.createElement('h3');
-  // quoteAuthor.textContent = `Who said it: ${this.quotes.author}`;
-  // this.container.appendChild(quoteAuthor)
+  const quoteAuthor = document.createElement('h3');
+  quoteAuthor.textContent = `Who said it: ${this.quotes.author}`;
+  this.container.appendChild(quoteAuthor)
 
   const quoteSeason = document.createElement('li');
   quoteSeason.textContent = `Series: ${this.quotes.season}`;
